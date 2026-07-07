@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>X-Sampa Writer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="XSampa.css">
+</head>
+
+
+<body>
+
+<h1>X-Sampa Writer</h1>
+<textarea id="write" class="writehere" onkeyup="IPAtranslate()" >"r\aIt hi:r\</textarea><br>
+<textarea id="translated" class="ipafont writehere" disabled=true>ˈɹaɪt hiːɹ</textarea>
+<script src="XSampa.js"></script><br><br>
+
+<h2>Notes</h2>
+<p>Most stuff is like vanilla X-SAMPA. You can prefix a letter with <code>+</code> to make it superscript, and you can prefix a diacritic with <code>\</code> to put it in an alternate position, with most being either above (or below if the default position is already above) or to the right.</p>
+
+<table class="table table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Character</th>
+<th title="Field #2">Input</th>
+<th title="Field #3">Description</th>
+<th title="Field #4">Superscript?</th>
+<th title="Field #5">Alternate?</th>
+</tr></thead>
+<tbody><tr>
+<td>a</td>
+<td><code>a</code></td>
+<td>A</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ᴀ</td>
+<td><code>a_J</code></td>
+<td>Smallcaps A</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɐ</td>
+<td><code>6</code></td>
+<td>Turned A</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɑ</td>
+<td><code>A</code></td>
+<td>Alpha</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɒ</td>
+<td><code>Q</code></td>
+<td>Turned Alpha</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>æ</td>
+<td><code>{</code></td>
+<td>Ash</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>b</td>
+<td><code>b</code></td>
+<td>B</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɓ</td>
+<td><code>b_&lt;</code></td>
+<td>Hooktop B</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>β</td>
+<td><code>B</code></td>
+<td>Beta</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʙ</td>
+<td><code>B\</code></td>
+<td>Smallcaps B</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>c</td>
+<td><code>c</code></td>
+<td>C</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ƈ</td>
+<td><code>c_&lt;</code></td>
+<td>Hooktop C</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ç</td>
+<td><code>C</code></td>
+<td>C cedilla</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɕ</td>
+<td><code>s\</code></td>
+<td>Curly-tail C</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>d</td>
+<td><code>d</code></td>
+<td>D</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɗ</td>
+<td><code>d_&lt;</code></td>
+<td>Hooktop D</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɖ</td>
+<td><code>d`</code></td>
+<td>Retroflex D</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ᶑ</td>
+<td><code>d`_&lt;</code></td>
+<td>Hooktop retroflex D</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ȡ</td>
+<td><code>d_J</code></td>
+<td>Alveolopalatal D</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ð</td>
+<td><code>D</code></td>
+<td>Edh</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>e</td>
+<td><code>e</code></td>
+<td>E</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ᴇ</td>
+<td><code>E_J</code></td>
+<td>Smallcaps E</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɛ</td>
+<td><code>E</code></td>
+<td>Open E</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɜ</td>
+<td><code>3</code></td>
+<td>Reversed Epsilon</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɝ</td>
+<td><code>3`</code></td>
+<td>Rhotic reversed Epsilon</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɞ</td>
+<td><code>3\</code></td>
+<td>Closed reversed Epsilon</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ə</td>
+<td><code>@</code></td>
+<td>Schwa</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɚ</td>
+<td><code>@`</code></td>
+<td>Rhotic Schwa</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɘ</td>
+<td><code>@\</code></td>
+<td>Reversed E</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>f</td>
+<td><code>f</code></td>
+<td>F</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɸ</td>
+<td><code>p\</code></td>
+<td>Phi</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʩ</td>
+<td><code>f_J</code></td>
+<td>Feng</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>𝼀</td>
+<td><code>F_J</code></td>
+<td>Trilled Feng</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>g</td>
+<td><code>g</code></td>
+<td>G</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɡ</td>
+<td><code>g\</code></td>
+<td>Script G</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɠ</td>
+<td><code>g_&lt;, g\_&lt;</code></td>
+<td>Hooktop G</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɣ</td>
+<td><code>G</code></td>
+<td>Gamma</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɢ</td>
+<td><code>G\</code></td>
+<td>Smallcaps G</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʛ</td>
+<td><code>G\_&lt;</code></td>
+<td>Hooktop smallcaps G</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>𝼂</td>
+<td><code>g_J</code></td>
+<td>Turned smallcaps G</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>h</td>
+<td><code>h</code></td>
+<td>H</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɦ</td>
+<td><code>h\</code></td>
+<td>Hooktop H</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɥ</td>
+<td><code>H</code></td>
+<td>Turned H</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɧ</td>
+<td><code>x\</code></td>
+<td>Hooktop Heng</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ħ</td>
+<td><code>X\</code></td>
+<td>Barred H</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʜ</td>
+<td><code>H\</code></td>
+<td>Smallcaps H</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>i</td>
+<td><code>i</code></td>
+<td>i</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɨ</td>
+<td><code>1</code></td>
+<td>Barred i</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɩ</td>
+<td><code>i_J</code></td>
+<td>Iota</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɪ</td>
+<td><code>I</code></td>
+<td>Smallcaps i</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ᵻ</td>
+<td><code>I\</code></td>
+<td>Barred smallcaps i</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>j</td>
+<td><code>j</code></td>
+<td>J</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɟ</td>
+<td><code>J\</code></td>
+<td>Barred gelded J</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʄ</td>
+<td><code>J\_&lt;</code></td>
+<td>Hooktop barred gelded J</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʝ</td>
+<td><code>j\</code></td>
+<td>Curly-tail J</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>k</td>
+<td><code>k</code></td>
+<td>K</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ƙ</td>
+<td><code>k_&lt;</code></td>
+<td>Hooktop K</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>l</td>
+<td><code>l</code></td>
+<td>L</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɭ</td>
+<td><code>l`</code></td>
+<td>Retroflex L</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ȴ</td>
+<td><code>l_J</code></td>
+<td>Alveolopalatal L</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɺ</td>
+<td><code>l\</code></td>
+<td>Turned long-leg R</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>𝼈</td>
+<td><code>l\`</code></td>
+<td>Retroflex turned long-leg R</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɫ</td>
+<td><code>5, l_e</code></td>
+<td>Dark L</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɬ</td>
+<td><code>K</code></td>
+<td>Belted L</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ꞎ</td>
+<td><code>K`</code></td>
+<td>Retroflex belted L</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɮ</td>
+<td><code>K\</code></td>
+<td>Lezh</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>𝼅</td>
+<td><code>K\`</code></td>
+<td>Retroflex Lezh</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʟ</td>
+<td><code>L\</code></td>
+<td>Smallcaps L</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>𝼄</td>
+<td><code>L\_J</code></td>
+<td>Belted smallcaps L</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʎ</td>
+<td><code>L</code></td>
+<td>Turned Y</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>𝼆</td>
+<td><code>L_J</code></td>
+<td>Belted turned Y</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>m</td>
+<td><code>m</code></td>
+<td>M</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɱ</td>
+<td><code>F</code></td>
+<td>Meng</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɯ</td>
+<td><code>M</code></td>
+<td>Turned M</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɰ</td>
+<td><code>M\</code></td>
+<td>Right-leg turned M</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>n</td>
+<td><code>n</code></td>
+<td>N</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɳ</td>
+<td><code>n`</code></td>
+<td>Retroflex N</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ȵ</td>
+<td><code>n_J</code></td>
+<td>Alveolopalatal N</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɲ</td>
+<td><code>J</code></td>
+<td>Left-tail N</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ŋ</td>
+<td><code>N</code></td>
+<td>Eng</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɴ</td>
+<td><code>N\</code></td>
+<td>Smallcaps N</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>o</td>
+<td><code>o</code></td>
+<td>O</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ø</td>
+<td><code>2</code></td>
+<td>Slashed O</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɵ</td>
+<td><code>8</code></td>
+<td>Barred O</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɔ</td>
+<td><code>O</code></td>
+<td>Open O</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ꭥ</td>
+<td><code>o_J</code></td>
+<td>Smallcaps Omega</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɤ</td>
+<td><code>7</code></td>
+<td>Ram&#39;s Horn</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>œ</td>
+<td><code>9</code></td>
+<td>Oethel</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɶ</td>
+<td><code>&amp;</code></td>
+<td>Smallcaps Oethel</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>p</td>
+<td><code>p</code></td>
+<td>P</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ƥ</td>
+<td><code>p_&lt;</code></td>
+<td>Hooktop P</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>q</td>
+<td><code>q</code></td>
+<td>Q</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʠ</td>
+<td><code>q_&lt;</code></td>
+<td>Hooktop Q</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ꞯ</td>
+<td><code>q_J</code></td>
+<td>Smallcaps Q</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>r</td>
+<td><code>r</code></td>
+<td>R</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɽ</td>
+<td><code>r`</code></td>
+<td>Retroflex R</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɹ</td>
+<td><code>r\</code></td>
+<td>Turned R</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɻ</td>
+<td><code>r\`</code></td>
+<td>Retroflex turned R</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ɾ</td>
+<td><code>4</code></td>
+<td>Fish-hook R</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʁ</td>
+<td><code>R</code></td>
+<td>Inverted smallcaps R</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʀ</td>
+<td><code>R\</code></td>
+<td>Smallcaps R</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>s</td>
+<td><code>s</code></td>
+<td>S</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʂ</td>
+<td><code>s`</code></td>
+<td>Retroflex S</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʃ</td>
+<td><code>S</code></td>
+<td>Esh</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʪ</td>
+<td><code>s_J</code></td>
+<td>Grooved S</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>t</td>
+<td><code>t</code></td>
+<td>T</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ƭ</td>
+<td><code>t_&lt;</code></td>
+<td>Hooktop T</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʈ</td>
+<td><code>t`</code></td>
+<td>Retroflex T</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>𝼉</td>
+<td><code>t`_&lt;</code></td>
+<td>Hooktop retroflex T</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ȶ</td>
+<td><code>t_J</code></td>
+<td>Alveolopalatal T</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>θ</td>
+<td><code>T</code></td>
+<td>Theta</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>u</td>
+<td><code>u</code></td>
+<td>U</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʉ</td>
+<td><code>}</code></td>
+<td>Barred U</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʊ</td>
+<td><code>U</code></td>
+<td>Horseshoe U</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ᵿ</td>
+<td><code>U\</code></td>
+<td>Barred horseshoe U</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>v</td>
+<td><code>v</code></td>
+<td>V</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʋ</td>
+<td><code>P, v\</code></td>
+<td>Script V</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʌ</td>
+<td><code>V</code></td>
+<td>Turned V</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ⱱ</td>
+<td><code>b\</code></td>
+<td>Right-hook V</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>w</td>
+<td><code>w</code></td>
+<td>W</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ω</td>
+<td><code>w_J</code></td>
+<td>Omega</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɷ</td>
+<td><code>U_J</code></td>
+<td>Closed Omega</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʍ</td>
+<td><code>W</code></td>
+<td>Turned W</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʬ</td>
+<td><code>W_J</code></td>
+<td>Bilabial percussive</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʭ</td>
+<td><code>T_J</code></td>
+<td>Bidental percussive</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>x</td>
+<td><code>x</code></td>
+<td>X</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>χ</td>
+<td><code>X</code></td>
+<td>Chi</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>y</td>
+<td><code>y</code></td>
+<td>Y</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʏ</td>
+<td><code>Y</code></td>
+<td>Smallcaps Y</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>z</td>
+<td><code>z</code></td>
+<td>Z</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʒ</td>
+<td><code>Z</code></td>
+<td>Ezh</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʐ</td>
+<td><code>z`</code></td>
+<td>Retroflex Z</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʑ</td>
+<td><code>z\</code></td>
+<td>Curly-tail Z</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʫ</td>
+<td><code>s_J</code></td>
+<td>Grooved Z</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʔ</td>
+<td><code>?</code></td>
+<td>Glottal Stop</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʕ</td>
+<td><code>?\</code></td>
+<td>Ayin</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʡ</td>
+<td><code>&gt;\</code></td>
+<td>Barred Glottal Stop</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʢ</td>
+<td><code>&lt;\</code></td>
+<td>Barred Ayin</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɿ</td>
+<td><code>M_J</code></td>
+<td>Unrounded back apical vowel</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʮ</td>
+<td><code>u_J</code></td>
+<td>Rounded back apical vowel</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʅ</td>
+<td><code>1_J</code></td>
+<td>Unrounded central apical vowel</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʯ</td>
+<td><code>}_J</code></td>
+<td>Rounded central apical vowel</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʘ</td>
+<td><code>p_!, O\</code></td>
+<td>Bilabial click</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ǀ</td>
+<td><code>d_!, |\</code></td>
+<td>Dental click</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ǃ</td>
+<td><code>t_!, !\</code></td>
+<td>Alveolar click</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>𝼊</td>
+<td><code>t`_!, !\`</code></td>
+<td>Retroflex click</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ǁ</td>
+<td><code>l_!, |\|\</code></td>
+<td>Lateral click</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ǂ</td>
+<td><code>c_!, =\</code></td>
+<td>Palatal click</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ʞ</td>
+<td><code>k_!</code></td>
+<td>Back-released click</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>¡</td>
+<td><code>T_!, !_J</code></td>
+<td>Percussive click</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ɋ</td>
+<td><code>p_!\</code></td>
+<td>Bilabial click (obsolete)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʇ</td>
+<td><code>d_!\</code></td>
+<td>Dental click (obsolete)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʗ</td>
+<td><code>t_!\</code></td>
+<td>Alveolar click (obsolete)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ψ</td>
+<td><code>t`_!\</code></td>
+<td>Retroflex click (obsolete)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ʖ</td>
+<td><code>l_!\</code></td>
+<td>Lateral click (obsolete)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>𝼋</td>
+<td><code>c_!\</code></td>
+<td>Palatal click (obsolete)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>⟨</td>
+<td><code>&lt;</code></td>
+<td>Chevron start</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>⟩</td>
+<td><code>&gt;</code></td>
+<td>Chevron end</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ˈ</td>
+<td><code>&quot;</code></td>
+<td>Primary stress</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ˌ</td>
+<td><code>%</code></td>
+<td>Secondary stress</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ː</td>
+<td><code>:</code></td>
+<td>Length mark</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ˑ</td>
+<td><code>:\</code></td>
+<td>Half-Length mark</td>
+<td>Yes</td>
+<td> </td>
+</tr>
+<tr>
+<td>ꜛ</td>
+<td><code>^</code></td>
+<td>Upstep</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>ꜜ</td>
+<td><code>!</code></td>
+<td>Downstep</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>↗</td>
+<td><code>^_J</code></td>
+<td>Global rise</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>↘</td>
+<td><code>v_J</code></td>
+<td>Global fall</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>↑</td>
+<td><code>R_J</code></td>
+<td>Egressive</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>↓</td>
+<td><code>D_J</code></td>
+<td>Ingressive</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>|</td>
+<td><code>|</code></td>
+<td>Foot break</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>‖</td>
+<td><code>||</code></td>
+<td>Intonation break</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>‿</td>
+<td><code>-\</code></td>
+<td>Liason</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>∅</td>
+<td><code>0</code></td>
+<td>Zero</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌</td>
+<td><code>0\</code></td>
+<td>Dotted circle</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌˭</td>
+<td><code>_u</code></td>
+<td>Unaspirated</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̾</td>
+<td><code>_n\</code></td>
+<td>Nareal fricative</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͊</td>
+<td><code>_m\</code></td>
+<td>Denasalized nasal</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͈</td>
+<td><code>_p</code></td>
+<td>Strong articulation</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌͉</td>
+<td><code>_P</code></td>
+<td>Weak articulation</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͍</td>
+<td><code>_P\</code></td>
+<td>Labial spreading</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͇</td>
+<td><code>_-_-</code></td>
+<td>(Labio)alveolar</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͎</td>
+<td><code>_f</code></td>
+<td>Whistled articulation</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͢◌</td>
+<td><code>)\</code></td>
+<td>Slurred or sliding articulation</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͡◌</td>
+<td><code>)</code></td>
+<td>Tiebar above</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͜◌</td>
+<td><code>(</code></td>
+<td>Tiebar below</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̩</td>
+<td><code>_=, =</code></td>
+<td>Syllabic</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌̈</td>
+<td><code>_&quot;</code></td>
+<td>Centralized vowel</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̠</td>
+<td><code>_-</code></td>
+<td>Retracted articulation</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌̌</td>
+<td><code>_R</code></td>
+<td>Rising tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̥</td>
+<td><code>_0</code></td>
+<td>Voiceless</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌ʼ</td>
+<td><code>_&gt;</code></td>
+<td>Ejective</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌ˤ</td>
+<td><code>_?\</code></td>
+<td>Pharyngealization</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌ʲ</td>
+<td><code>_j, &#39;</code></td>
+<td>Palatalization</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̂</td>
+<td><code>_F</code></td>
+<td>Falling tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̚</td>
+<td><code>_}</code></td>
+<td>No audible release</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̯</td>
+<td><code>_^</code></td>
+<td>Non-syllabic</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌̃</td>
+<td><code>_~, ~</code></td>
+<td>Nasalized</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̘</td>
+<td><code>_A</code></td>
+<td>Advanced tongue root</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌̺</td>
+<td><code>_a</code></td>
+<td>Apical</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌᷅</td>
+<td><code>_B_L</code></td>
+<td>Low rising tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̏</td>
+<td><code>_B</code></td>
+<td>Extra-low tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̜</td>
+<td><code>_c</code></td>
+<td>Less rounded</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̪</td>
+<td><code>_d</code></td>
+<td>Dental or dentolabial</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌̴</td>
+<td><code>_e</code></td>
+<td>Velarization or pharyngealization (obsolete)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌ˠ</td>
+<td><code>_G</code></td>
+<td>Velarization</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌᷄</td>
+<td><code>_H_T</code></td>
+<td>Mid-rising tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌́</td>
+<td><code>_H</code></td>
+<td>High tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̰</td>
+<td><code>_k</code></td>
+<td>Creaky voice</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̀</td>
+<td><code>_L</code></td>
+<td>Low tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌ˡ</td>
+<td><code>_l</code></td>
+<td>Lateral release</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̄</td>
+<td><code>_M</code></td>
+<td>Mid tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̻</td>
+<td><code>_m</code></td>
+<td>Laminal</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̼</td>
+<td><code>_N</code></td>
+<td>Linguolabial</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌ⁿ</td>
+<td><code>_n</code></td>
+<td>Nasal release</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̹</td>
+<td><code>_O</code></td>
+<td>More rounded</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̞</td>
+<td><code>_o</code></td>
+<td>Lowered</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌̙</td>
+<td><code>_q</code></td>
+<td>Retracted tongue root</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌᷈</td>
+<td><code>_R_F</code></td>
+<td>Peaking tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̝</td>
+<td><code>_r</code></td>
+<td>Raised</td>
+<td> </td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>◌̋</td>
+<td><code>_T</code></td>
+<td>Extra-high tone</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̬</td>
+<td><code>_v</code></td>
+<td>Voiced</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌ʷ</td>
+<td><code>_w</code></td>
+<td>Labialization</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̆</td>
+<td><code>_X</code></td>
+<td>Extra-short</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌̽</td>
+<td><code>_x</code></td>
+<td>Mid-centralized</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>˥</td>
+<td><code>_T\</code></td>
+<td>Extra-high tone (Chao)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>˦</td>
+<td><code>_H\</code></td>
+<td>High tone (Chao)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>˧</td>
+<td><code>_M\</code></td>
+<td>Mid tone (Chao)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>˨</td>
+<td><code>_L\</code></td>
+<td>Low tone (Chao)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>˩</td>
+<td><code>_B\</code></td>
+<td>Extra-low tone (Chao)</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͕</td>
+<td><code>_&gt;</code></td>
+<td>Left offset</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>◌͔</td>
+<td><code>_&lt;</code></td>
+<td>Right offset</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td><code>*</code></td>
+<td>Escape character</td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody></table>
+</body>
+
+</html>
